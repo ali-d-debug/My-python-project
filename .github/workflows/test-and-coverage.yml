@@ -1,5 +1,5 @@
 name: Test and Coverage
-            
+
 on:
   push:
     branches:
@@ -24,7 +24,8 @@ jobs:
     # 3. Installez les dépendances
     - name: Install dependencies
       run: |
-        pip install pytest 
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
 
     # 4. Exécutez les tests et mesurez la couverture
     - name: Run tests and coverage
@@ -46,4 +47,3 @@ jobs:
         files: coverage.xml
         flags: unittests
         name: code-coverage
-
