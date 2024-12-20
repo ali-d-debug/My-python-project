@@ -25,7 +25,6 @@ jobs:
     - name: Install dependencies
       run: |
         pip install pytest 
-        pip install pytest -cov
 
     # 4. Exécutez les tests et mesurez la couverture
     - name: Run tests and coverage
