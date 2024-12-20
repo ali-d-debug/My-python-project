@@ -1,5 +1,4 @@
 name: Test and Coverage
-uses: coverallsapp/github-action@v2.3.4
             
 on:
   push:
@@ -25,8 +24,8 @@ jobs:
     # 3. Installez les dépendances
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        pip install pytest 
+        pip install pytest -cov
 
     # 4. Exécutez les tests et mesurez la couverture
     - name: Run tests and coverage
