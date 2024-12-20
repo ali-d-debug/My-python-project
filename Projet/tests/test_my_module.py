@@ -5,6 +5,9 @@ Tests unitaires pour le module my_module.
 # On importe pytest, un framework de test pour Python
 import pytest
 # On importe les fonctions que l'on souhaite tester depuis le module my_module
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
 from my_module import add, subtract, multiply, divide, modulo, power
 
 # Test de la fonction 'add' (additionner deux nombres)
